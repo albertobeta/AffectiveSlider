@@ -1,0 +1,75 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Affective Slider (AS) Example</title>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+<style>
+	.AScontainer {
+		margin:2em 0 6em 0;
+		width:682px;
+		background-repeat: no-repeat, no-repeat;
+		background-position: left, right;
+		padding: 0 75px 0 75px;
+	}
+
+	.arousal {
+		background-image: url(images/AS_sleepy.png), url(images/AS_wideawake.png);
+	}
+
+	.pleasure {
+		background-image: url(images/AS_unhappy.png), url(images/AS_happy.png);
+	}
+
+	.AffectiveSlider input {
+		/* Hide the number input */
+		display: none;
+	}
+	.AffectiveSlider .ui-slider-track {
+		margin-left: 15px;
+		width:656px;
+		background-color:#FFF;
+		border-color:#000;
+	}
+
+	.AffectiveSlider .ui-slider-handle {
+		background-color:#FFF;
+		border-color:#000;
+	}
+
+	.ASintensityCue {
+		margin-left: 15px;
+		width:656px;
+		height:48px;
+		background-image: url("images/AS_intensity_cue.png");
+	}
+
+</style>
+</head>
+<body>
+	
+	<form class="AffectiveSlider">
+	
+	<div class="AScontainer arousal">
+	<input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01" />
+	<div class="ASintensityCue"></div>
+	</div>
+	
+	<div class="AScontainer pleasure">
+	<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01" />
+	<div class="ASintensityCue"></div>
+	</div>
+	
+	</form>
+
+<body>
+</html>
+
+
+
+
