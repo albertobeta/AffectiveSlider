@@ -12,18 +12,20 @@
 <style>
 	.AScontainer {
 		margin:2em 0 6em 0;
-		width:682px;
 		background-repeat: no-repeat, no-repeat;
 		background-position: left, right;
+		background-size:contain;
 		padding: 0 75px 0 75px;
 	}
 
 	.arousal {
 		background-image: url(images/AS_sleepy.png), url(images/AS_wideawake.png);
+		background-size:contain;
 	}
 
 	.pleasure {
 		background-image: url(images/AS_unhappy.png), url(images/AS_happy.png);
+		background-size:contain;
 	}
 
 	.AffectiveSlider input {
@@ -32,7 +34,6 @@
 	}
 	.AffectiveSlider .ui-slider-track {
 		margin-left: 15px;
-		width:656px;
 		background-color:#FFF;
 		border-color:#000;
 	}
@@ -43,10 +44,13 @@
 	}
 
 	.ASintensityCue {
-		margin-left: 15px;
-		width:656px;
+		margin: 0 15px 0 15px;
 		height:48px;
 		background-image: url("images/AS_intensity_cue.png");
+		background-repeat: no-repeat;
+		background-size:100%;
+		background-position: center;
+		
 	}
 
 </style>
