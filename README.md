@@ -1,6 +1,6 @@
 # The Affective Slider (AS)
 The Affective Slider (AS) is a new digital scale for the self-assessment of emotion 
-composed of two slider controls that measure pleasure (happiness - sadness) and arousal (excitement - boredom) on a continuous scale.
+composed of two slider controls that measure pleasure (sad - happy) and arousal (sleepy - wideawake) on a continuous scale.
 
 The AS was empirically validated and presented in the following open access scientific article:
 > A. Betella and Verschure, P.F.M.J., "[The Affective Slider: A Digital Self-Assessment Scale for the Measurement of Human Emotions](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0148037)", PLoS ONE, vol. 11, p. e0148037, 2016.DOI: 10.1371/journal.pone.0148037
