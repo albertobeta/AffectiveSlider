@@ -1,16 +1,17 @@
 # The Affective Slider (AS)
 The Affective Slider (AS) is a new digital scale for the self-assessment of emotion 
-composed of two slider controls that measure pleasure (sad - happy) and arousal (sleepy - wideawake) on a continuous scale.
+composed of two slider controls that measure pleasure (sad - happy) and arousal (sleepy - wideawake). It can
+be easily included in electronic surveys and questionnaires. 
+The AS is released under a [Creative Commons license](http://creativecommons.org/licenses/by-sa/4.0/) and
+can be freely adopted in a broad range of fields, including (but not limited to) marketing research,
+user experience testing, science and psychology.
 
-The AS was empirically validated and presented in the following open access scientific article:
+The AS has been empirically validated and presented in the following open access scientific publication:
 > A. Betella and Verschure, P.F.M.J., "[The Affective Slider: A Digital Self-Assessment Scale for the Measurement of Human Emotions](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0148037)", PLoS ONE, vol. 11, p. e0148037, 2016.DOI: 10.1371/journal.pone.0148037
 
 ![alt tag](https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_full.png)
 
 ## Design and implementation guidelines
-By releasing the Affective Slider under a [Creative Commons license](http://creativecommons.org/licenses/by-sa/4.0/)
-we encourage its use in a broad range of fields, including (but not limited to) marketing research,
-user experience testing, science and psychology.
 
 See the [existing implementations of the AS](https://github.com/albertobeta/AffectiveSlider/tree/master/code_implementations)
 and contribute with your own implementations. Just fork & pull :v:
