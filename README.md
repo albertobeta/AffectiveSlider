@@ -14,7 +14,7 @@ The AS has been empirically validated and presented in the following open access
 ## Design and implementation guidelines
 
 See the [existing implementations of the AS](https://github.com/albertobeta/AffectiveSlider/tree/master/code_implementations)
-and contribute with your own implementations. Just fork & pull :v:
+and contribute with your own. Just fork & pull :v:
 
 Custom-tailored implementations of the AS can be developed using any programming
 framework (e.g. iOS or Android SDK), as long as they fully comply with the following guidelines:
