@@ -7,7 +7,7 @@ can be freely adopted in a broad range of fields, including (but not limited to)
 user experience testing, science and psychology.
 
 The AS has been empirically validated and presented in the following open access scientific publication:
-> A. Betella and Verschure, P.F.M.J., "[The Affective Slider: A Digital Self-Assessment Scale for the Measurement of Human Emotions](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0148037)", PLoS ONE, vol. 11, p. e0148037, 2016. DOI: 10.1371/journal.pone.0148037
+> Alberto Betella and Paul F.M.J. Verschure, "[The Affective Slider: A Digital Self-Assessment Scale for the Measurement of Human Emotions](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0148037)", PLoS ONE, vol. 11, p. e0148037, 2016. DOI: 10.1371/journal.pone.0148037
 
 ![the Affective Slider](https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_full.png)
 
