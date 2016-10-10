@@ -1,0 +1,211 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Affective Slider (AS) pure HTML5 Example</title>
+
+<style>
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.AffectiveSlider {
+	width: 100%;
+	text-align: center;
+}
+
+.arousal_svg {
+	width: 7%;
+	margin: 0px;
+	margin-bottom: -30px;
+}
+
+.AffectiveSlider {
+	margin-top: 2em;
+}
+
+.AffectiveSlider .intensity_cue_svg {
+	width: 78%;
+	position: relative;
+	top: -25px;
+}
+
+@media (max-width: 1100px) {
+	.AffectiveSlider .intensity_cue_svg {
+		width: 76%;
+		position: relative;
+		top: 5px;
+	}
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+.AffectiveSlider input[type=range]{
+	/* fix for FF unable to apply focus style bug  */
+	border: 10px solid white;
+
+	/*required for proper track sizing in FF*/
+	width: 80%;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	margin-top: 6px;
+}
+
+
+.AffectiveSlider input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 20px;
+	background: #ddd;
+	border-radius: 10px;
+	border: none;
+}
+input[type=range]:focus::-moz-range-track {
+	background: #ccc;
+}
+
+.AffectiveSlider input[type=range]::-moz-range-thumb {
+	height: 35px;
+	width: 35px;
+	border-radius: 60%;
+	background: white;
+	border: 2px solid #505050;
+}
+
+.AffectiveSlider input[type=range]::-moz-range-thumb:hover {
+	background: #505050;
+	border: 2px solid white;
+	cursor: pointer;
+	box-shadow: 0px 0px 12px #212121;
+}
+
+
+.AffectiveSlider input[type=range]{
+	-webkit-appearance: none;
+}
+
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 20px;
+	border: none;
+	background: #ddd;
+	border-radius: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 35px;
+	width: 35px;
+	border-radius: 60%;
+	background: white;
+	border: 2px solid #505050;
+	margin-top: -8px;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+	background: #505050;
+	border: 2px solid white;
+	cursor: pointer;
+	box-shadow: 0px 0px 12px #212121;
+}
+
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #ccc;
+}
+
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 20px;
+	/*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+	background: transparent;
+	/*leave room for the larger thumb to overflow with a transparent border */
+	border-color: transparent;
+	border-width: 16px 0;
+	/*remove default tick marks*/
+	color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+	background: #ddd;
+	border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+	background: #ddd;
+	border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+	height: 35px;
+	width: 35px;
+	border-radius: 60%;
+	background: white;
+	border: 2px solid #505050;
+}
+.AffectiveSlider input[type=range]::-ms-thumb:hover {
+	background: #505050;
+	border: 2px solid white;
+	cursor: pointer;
+	box-shadow: 0px 0px 12px #212121;
+}
+input[type=range]:focus::-ms-fill-lower {
+	background: #ccc;
+}
+input[type=range]:focus::-ms-fill-upper {
+	background: #ccc;
+}
+
+div {
+	margin-bottom: 2em;
+}
+
+</style>
+</head>
+<body>
+
+	<form class="AffectiveSlider">
+
+		<div id='AffectiveSlider'>
+	<!--
+	Level of arousal
+	<div class="arousal">
+	<object class='arousal_svg' type="image/svg+xml" data="images/AS_sleepy.svg"></object>
+	<input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01" />
+	<object class='arousal_svg' type="image/svg+xml" data="images/AS_wideawake.svg"></object>
+	<object class='intensity_cue_svg' type="image/svg+xml" data="images/AS_intensity_cue.svg"></object>
+	</div>
+	
+	Level of pleasure
+	<div class="pleasure">
+	<object class='arousal_svg' type="image/svg+xml" data="images/AS_unhappy.svg"></object>
+	<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01" />
+	<object class='arousal_svg' type="image/svg+xml" data="images/AS_happy.svg"></object>
+	<object class='intensity_cue_svg' type="image/svg+xml" data="images/AS_intensity_cue.svg"></object>
+	</div>
+	-->
+		</div>
+		<input type='submit' value='Submit'/>
+
+	</form>
+<script>
+window.onload=function(){
+	var aff_slider = document.getElementById('AffectiveSlider');
+
+	var arousal_part = 'Level of arousal \n<div class="arousal"> \n<object class="arousal_svg" type="image/svg+xml" data="images/AS_sleepy.svg"></object> \n<input type="range" name="AS-arousal" id="AS-arousal" value=".5" min="0" max="1" step=".01" /> \n<object class="arousal_svg" type="image/svg+xml" data="images/AS_wideawake.svg"></object> \n<object class="intensity_cue_svg" type="image/svg+xml" data="images/AS_intensity_cue.svg"></object></div>';
+
+	var pleasure_part = 'Level of pleasure \n<div class="pleasure"> \n<object class="arousal_svg" type="image/svg+xml" data="images/AS_unhappy.svg"></object> \n<input type="range" name="AS-pleasure" id="AS-pleasure" value=".5" min="0" max="1" step=".01" /> \n<object class="arousal_svg" type="image/svg+xml" data="images/AS_happy.svg"></object> \n<object class="intensity_cue_svg" type="image/svg+xml" data="images/AS_intensity_cue.svg"></object> \n</div>';
+
+	if (Math.random() > 0.5) {
+		aff_slider.innerHTML = arousal_part+pleasure_part;
+	}
+	else {
+		aff_slider.innerHTML = pleasure_part+arousal_part;
+	}
+}
+</script>
+<body>
+
+</html>
