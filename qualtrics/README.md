@@ -4,6 +4,9 @@ This folder has the necessary code to implement the Affective Slider in Qualtric
 I would share the questions directly, but can't find a way to do that (if you
 know how, let me know -mjsobrep).
 
+You should end up with this: ![](instruction_images/qualtrics_demo.png)
+
+## Setup:
 - Create a new slider element: ![](instruction_images/make_slider.png)
 - Set to 1 choice and 0 grid marks: ![](instruction_images/choices_grid.png)
 - Position the slider at 50: ![](instruction_images/set_slider.png)
