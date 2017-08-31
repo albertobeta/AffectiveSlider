@@ -6,7 +6,12 @@ know how, let me know -mjsobrep).
 
 You should end up with this: ![](instruction_images/qualtrics_demo.png)
 
-## Setup:
+## Setup, import:
+The easiest way to get these elements is to import the [Affective_Slider_shared](Affective_Slider_shared.qsf)
+
+## Setup, custom:
+Alternatively you can setup from scratch
+
 - Create a new slider element: ![](instruction_images/make_slider.png)
 - Set to 1 choice and 0 grid marks: ![](instruction_images/choices_grid.png)
 - Position the slider at 50: ![](instruction_images/set_slider.png)
