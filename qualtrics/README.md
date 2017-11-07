@@ -24,3 +24,13 @@ Alternatively you can setup from scratch
 - Randomize the block of questions: 
   - ![](instruction_images/randomize.png)
   - ![](instruction_images/randomize2.png)
+
+## Issues
+### Horizontal Scroll Bars
+Qualtrics's style sheet has: `.Skin .HBAR .horizontalbar,.Skin .HSLIDER .horizontalbar{min-width:250px;padding-right:15px}`
+This makes the slier bar min width 250px, which can cause horizontal scroll bars
+to show up on small screens. 
+
+### Table Layout
+This currently uses a table layout for the HTML. That is non ideal. This should
+be switched over to a better CSS based layout method. 
