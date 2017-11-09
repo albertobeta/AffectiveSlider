@@ -6,7 +6,12 @@ know how, let me know -mjsobrep).
 
 You should end up with this: ![](instruction_images/qualtrics_demo.png)
 
-## Setup:
+## Setup, import:
+The easiest way to get these elements is to import the [Affective_Slider_shared](Affective_Slider_shared.qsf)
+
+## Setup, custom:
+Alternatively you can setup from scratch
+
 - Create a new slider element: ![](instruction_images/make_slider.png)
 - Set to 1 choice and 0 grid marks: ![](instruction_images/choices_grid.png)
 - Position the slider at 50: ![](instruction_images/set_slider.png)
@@ -19,3 +24,13 @@ You should end up with this: ![](instruction_images/qualtrics_demo.png)
 - Randomize the block of questions: 
   - ![](instruction_images/randomize.png)
   - ![](instruction_images/randomize2.png)
+
+## Issues
+### Horizontal Scroll Bars
+Qualtrics's style sheet has: `.Skin .HBAR .horizontalbar,.Skin .HSLIDER .horizontalbar{min-width:250px;padding-right:15px}`
+This makes the slier bar min width 250px, which can cause horizontal scroll bars
+to show up on small screens. 
+
+### Table Layout
+This currently uses a table layout for the HTML. That is non ideal. This should
+be switched over to a better CSS based layout method. 
