@@ -2,7 +2,7 @@
 
 This folder has the necessary code to implement the Affective Slider in Qualtrics.
 
-You should end up with this: ![](instruction_images/AS_qualtrics.png)
+You should end up with this: ![](instruction_images/AS_Qualtrics.png)
 
 ## Setup
 
