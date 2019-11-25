@@ -13,8 +13,6 @@ The AS has been empirically validated and presented in the following open access
 
 ## Design and implementation guidelines
 
-If you use Qualtrics, 
-
 See the [existing implementations of the AS](https://github.com/albertobeta/AffectiveSlider/tree/master/code_implementations), including [Qualtrics](https://github.com/albertobeta/AffectiveSlider/tree/master/code_implementations/qualtrics). Please feel free to contribute with your own custom implementation.
 
 Custom-tailored implementations of the AS can be developed using any programming
