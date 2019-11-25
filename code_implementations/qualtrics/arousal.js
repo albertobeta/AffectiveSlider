@@ -1,10 +1,37 @@
 Qualtrics.SurveyEngine.addOnload(function()
 {
+	
+	var leftEmojiURL = "https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_sleepy.png"
+	var rightEmojiURL = "https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_wideawake.png"
+	var intensityCue = "https://raw.githubusercontent.com/albertobeta/AffectiveSlider/master/PNGs/AS_intensity_cue.png"
+	
 	var qid = this.questionId;
-	console.log('working to build question: ' + qid);
-	var labels =  $(qid).descendants().grep(new Selector('.statement-container'));
-	labels[0].hide()
-	var cont = labels[0].getOffsetParent();
-	cont.update('<table style="width:100%;background-color:transparent">\n<tr>\n<td align="right">\n<svg version="1.1" viewBox="0 0 77.952755 77.952756" xmlns="http://www.w3.org/2000/svg" width="75px" height="75px">\n<defs>\n<clipPath id="clipPath214">\n<path d="m0 338h861v-338h-861v338z" />\n</clipPath>\n</defs>\n<g transform="translate(0 -974.41)">\n<g transform="matrix(1.25 0 0 -1.25 -45.213 1336.2)">\n<g clip-path="url(#clipPath214)">\n<g transform="translate(67.542 285.34)">\n<path d="m0 0c-15.27 0-27.693-12.424-27.693-27.693 0-15.272 12.423-27.694 27.693-27.694 15.271 0 27.693 12.422 27.693 27.694 0 15.269-12.422 27.693-27.693 27.693m0-57.887c-16.648 0-30.193 13.545-30.193 30.194 0 16.648 13.545 30.193 30.193 30.193s30.193-13.545 30.193-30.193c0-16.649-13.545-30.194-30.193-30.194" fill="#505050" />\n</g>\n<g transform="translate(52.681 249.31)">\n<path d="m0 0c-0.37 0-0.744 0.014-1.123 0.043-2.326 0.176-5.145 1.019-6.076 2.853l2.997 1.258c0.136-0.265 1.292-0.965 3.354-1.123 1.13-0.084 4.965-0.146 7.085 2.672l2.726-1.693c-1.92-2.553-5.215-4.01-8.963-4.01" fill="#505050" />\n</g>\n<g transform="translate(80.698 249.67)">\n<path d="m0 0c-0.92 0-1.867 0.107-2.82 0.328-2.134 0.494-4.621 1.715-5.201 3.656l2.98 0.832c0.084-0.281 1.051-1.132 2.943-1.57 1.03-0.238 4.586-0.824 6.994 1.668l2.267-2.047c-1.804-1.867-4.364-2.867-7.163-2.867" fill="#505050" />\n</g>\n<g transform="translate(45.801 257.62)">\n<path d="M 0,0 -2.032,0.734 C -2.007,0.807 0.659,7.945 8.917,7.752 L 8.866,5.59 C 2.163,5.727 0.021,0.057 0,0" fill="#505050" />\n</g>\n<g transform="translate(88.595 257.73)">\n<path d="m0 0c-3.889 6.34-9.369 4.979-9.602 4.916l-0.524 1.93c0.071 0.019 7.138 1.853 11.831-5.799l-1.705-1.047z" fill="#505050" />\n</g>\n<g transform="translate(68.542 237.84)">\n<path d="m0 0c3.582 0 6.485-0.896 6.485-2s-2.903-2-6.485-2c-3.581 0-6.484 0.896-6.484 2s2.903 2 6.484 2" fill="#505050" />\n</g>\n<g transform="translate(68.542 237.84)">\n<path d="m0 0c3.582 0 6.485-0.896 6.485-2s-2.903-2-6.485-2c-3.581 0-6.484 0.896-6.484 2s2.903 2 6.484 2z" fill="none" stroke="#505050" stroke-miterlimit="10" />\n</g>\n</g>\n</g>\n</g>\n</svg>\n<td style="width:99%">'+cont.innerHTML+'</td>\n<td align="left">\n<svg version="1.1" viewBox="0 0 77.952756 77.952756" xmlns="http://www.w3.org/2000/svg" width="75px" height="75px">\n<g transform="translate(0 -974.41)">\n<g transform="matrix(1.25 0 0 -1.25 -959.62 1333.9)">\n<g transform="translate(798.95 283.74)">\n<path d="m0 0c-15.271 0-27.693-12.424-27.693-27.693 0-15.272 12.422-27.694 27.693-27.694 15.27 0 27.693 12.422 27.693 27.694 0 15.269-12.423 27.693-27.693 27.693m0-57.887c-16.648 0-30.193 13.545-30.193 30.194 0 16.648 13.545 30.193 30.193 30.193s30.193-13.545 30.193-30.193c0-16.649-13.545-30.194-30.193-30.194" fill="#505050" />\n</g>\n<g transform="translate(786.58 273.04)">\n<path d="m0 0c4.699 0 8.509-3.81 8.509-8.508 0-4.699-3.81-8.509-8.509-8.509-4.698 0-8.508 3.81-8.508 8.509 0 4.698 3.81 8.508 8.508 8.508" fill="#fff" />\n</g>\n<g transform="translate(786.58 272.29)">\n<path d="m0 0c-4.278 0-7.759-3.48-7.759-7.758 0-4.277 3.481-7.758 7.759-7.758s7.758 3.481 7.758 7.758c0 4.278-3.48 7.758-7.758 7.758m0-17.016c-5.104 0-9.259 4.154-9.259 9.258 0 5.106 4.155 9.258 9.259 9.258s9.258-4.152 9.258-9.258c0-5.104-4.154-9.258-9.258-9.258" fill="#505050" />\n</g>\n<g transform="translate(786.58 268.48)">\n<path d="m0 0c2.182 0 3.951-1.768 3.951-3.949 0-2.182-1.769-3.95-3.951-3.95-2.181 0-3.949 1.768-3.949 3.95 0 2.181 1.768 3.949 3.949 3.949" fill="#505050" />\n</g>\n<g transform="translate(785.97 239.72)">\n<path d="m0 0h24.271" fill="#505050" stroke="#505050" stroke-miterlimit="10" stroke-width="3" />\n</g>\n<g transform="translate(811.24 273.03)">\n<path d="m0 0c4.699 0 8.509-3.81 8.509-8.509 0-4.698-3.81-8.508-8.509-8.508-4.698 0-8.508 3.81-8.508 8.508 0 4.699 3.81 8.509 8.508 8.509" fill="#fff" />\n</g>\n<g transform="translate(811.24 272.29)">\n<path d="m0 0c-4.278 0-7.759-3.48-7.759-7.76 0-4.277 3.481-7.756 7.759-7.756s7.758 3.479 7.758 7.756c0 4.28-3.48 7.76-7.758 7.76m0-17.016c-5.104 0-9.259 4.153-9.259 9.256 0 5.106 4.155 9.26 9.259 9.26s9.258-4.154 9.258-9.26c0-5.103-4.154-9.256-9.258-9.256" fill="#505050" />\n</g>\n<g transform="translate(811.24 268.48)">\n<path d="m0 0c2.182 0 3.951-1.769 3.951-3.95 0-2.182-1.769-3.949-3.951-3.949-2.181 0-3.949 1.767-3.949 3.949 0 2.181 1.768 3.95 3.949 3.95" fill="#505050" />\n</g>\n</g>\n</g>\n</svg>\n</td>\n</tr>\n<tr>\n<td></td>\n<td>\n<svg version="1.1" viewBox="0 0 806.10233 53.149605" xmlns="http://www.w3.org/2000/svg">\n<defs>\n<linearGradient id="b" x2="1" gradientTransform="matrix(322.55 0 0 -322.55 432.61 66.842)" gradientUnits="userSpaceOnUse">\n<stop stop-color="#fff" offset="0" />\n<stop stop-color="#231f20" offset="1" />\n</linearGradient>\n<linearGradient id="a" x2="1" gradientTransform="matrix(-322.55 0 0 322.55 432.61 65.842)" gradientUnits="userSpaceOnUse">\n<stop stop-color="#fff" offset="0" />\n<stop stop-color="#231f20" offset="1" />\n</linearGradient>\n</defs>\n<g transform="translate(0 -999.21)">\n<g transform="matrix(1.25 0 0 -1.25 -137.4 1109.4)">\n<path d="m593.88 76.923-161.27-10.585 161.27-10.081 161.27-10.082v20.667 20.667l-161.27-10.586z" fill="url(#b)" />\n<path d="m110.06 65.842v-20.666l161.27 10.585 161.27 10.584-161.27 10.082-161.27 10.082v-20.667z" fill="url(#a)" />\n</g>\n</g>\n</svg>\n</td>\n<td></td>\n</tr>\n</table>')
-    console.log('finished building question: '+qid);
+	
+	console.log(qid);
+	
+	var statement = jQuery($(qid).select(".statement-container"));
+	
+	console.log(statement);
+		
+	statement.hide();
+	
+	var sliderTable =  jQuery($(qid).select("table"));
+	
+	//sliderTable.css("background-color", "red");
+	
+	var sliderRow =  jQuery($(qid).select("tr"));
+	
+	var sliderBar =  jQuery($(qid).select("td.BarOuter"));
+
+	//sliderBar.css("background-color", "green");
+
+	sliderBar.css("width", "80%");
+	
+	jQuery(sliderRow.prepend("<td style='width:10%;'><img src='"+leftEmojiURL+"'></td>"));
+	
+	jQuery(sliderRow.append("<td  style='width:10%;'><img src='"+rightEmojiURL+"'></td>"));
+	
+	jQuery(sliderTable.after("<div style='width:100%;text-align:center;'><img src='"+intensityCue+"'></div>"));
+
+
 });
